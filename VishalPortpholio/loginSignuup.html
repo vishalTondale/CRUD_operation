@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup Page</title>
+  <style>
+    /* CSS styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      overflow: hidden;
+    }
+
+    .form-container {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.6s ease-in-out;
+      backface-visibility: hidden;
+    }
+
+    .form-container.sign-up-container {
+      left: 100%;
+      transform: translateX(0);
+    }
+
+    .form-container.sign-in-container {
+      transform: translateX(-100%);
+    }
+
+    .form-container.active {
+      transform: translateX(0);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .overlay-container {
+      position: absolute;
+      top: 0;
+      width: 200%;
+      height: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: #007bff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.6s ease-in-out;
+      backface-visibility: hidden;
+    }
+
+    .overlay.right-panel-active .overlay {
+      transform: translateX(-100%);
+    }
+
+    .overlay-panel {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.6s ease-in-out;
+      backface-visibility: hidden;
+    }
+
+    .overlay-left {
+      transform: translateX(-25%);
+    }
+
+    .overlay-right {
+      right: 0;
+      transform: translateX(25%);
+    }
+
+    .overlay-panel h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .overlay-panel p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .ghost {
+      background: transparent;
+      color: #007bff;
+      border: 2px solid #007bff;
+    }
+
+    .ghost:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="#">
+      <h1>Create Account</h1>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Sign Up</button>
+      <p>Already have an account? <a href="#" id="signInBtn" class="ghost">Sign In</a></p>
+    </form>
+  </div>
+  <div class="form-container sign-in-container active">
+    <form action="#">
+      <h1>Sign In</h1>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Sign In</button>
+      <p>Don't have an account yet? <a href="#" id="signUpBtn" class="ghost">Sign Up</a></p>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us, please login with your personal info</p>
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <button class="ghost" id="signUp">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript code
+  document.getElementById('signUp').addEventListener('click', function () {
+    document.getElementById('container').classList.add('right-panel-active');
+  });
+
+  document.getElementById('signIn').addEventListener('click', function () {
+    document.getElementById('container').classList.remove('right-panel-active');
+  });
+
+  document.getElementById('signInBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('container').classList.remove('right-panel-active');
+  });
+
+  document.getElementById('signUpBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('container').classList.add('right-panel-active');
+  });
+</script>
+
+</body>
+</html>

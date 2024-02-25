@@ -1,0 +1,637 @@
+/* Resetting default browser styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 15px; /* Adjust spacing between links */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.logo img {
+    height: 40px; /* Adjust the height as needed */
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/*   ntro */
+
+/* Introduction section styles */
+#introduction {
+    background-color: #f9f9f9;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.intro-text span {
+    color: #ff6600; /* Adjust color as needed */
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the books section */
+#books {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.free,
+.paid {
+    flex: 1 1 45%;
+    margin-bottom: 40px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.book a {
+    text-decoration: none;
+    color: #333;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book h4 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.book p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+
+
+
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .free,
+    .paid {
+        flex: 1 1 100%;
+    }
+
+    .books-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .book {
+        width: 90%;
+    }
+}
+.book {
+    margin-bottom: 20px; /* Adjust the margin between books */
+    margin-right: 20px; /* Optional: Add right margin */
+    text-align: center;
+    width: 200px; /* Set a specific width */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.book img {
+    width: 100%; /* Ensure image fills the container */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom-in effect on hover */
+.book:hover {
+    transform: scale(1.1); /* Scale the book on hover */
+}
+
+/* Media queries remain the same */
+
+/* Add space between books on larger screens */
+@media screen and (min-width: 768px) {
+    .book {
+        margin-right: 30px; /* Adjust margin for larger screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Styles for the courses section */
+#courses {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.free,
+.paid {
+    flex: 1 1 45%;
+    margin-bottom: 40px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.course {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom-in effect on hover */
+.course:hover {
+    transform: scale(1.1);
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .free,
+    .paid {
+        flex: 1 1 100%;
+    }
+
+    .courses-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .course {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Styles for the videos section */
+#videos {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-item {
+    margin: 10px;
+    text-align: center;
+    width: 250px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+}
+
+.video-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .video-item {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for feature carousel */
+#features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#feature-carousel .carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    min-width: 100%;
+    scroll-snap-align: start;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Ensure proper spacing and sizing for smaller screens */
+@media (max-width: 768px) {
+    .feature-item {
+        flex: 0 0 80%; /* Reduce width for smaller screens */
+        margin: 0 10%; /* Add margin between items */
+    }
+}
+.feature-item {
+    position: relative;
+}
+
+.carousel-inner {
+    max-width: 100%;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: 500px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: #fff;
+}
+
+.carousel-caption h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+}
+
+.carousel-caption blockquote {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .carousel-caption h3 {
+        font-size: 20px;
+    }
+    
+    .carousel-caption p {
+        font-size: 14px;
+    }
+    
+    .carousel-caption blockquote {
+        font-size: 12px;
+    }
+}
+
+
+
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content {
+    display: grid;
+    grid-gap: 20px;
+}
+
+
+
+/* Your existing styles... */
+
+/* Styles for the footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px; /* Increased margin for more space */
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    margin-top: 20px;
+    flex: 1 1 40%;
+}
+
+.contact-form h4 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form input[type="text"]{
+	background-color: #444;
+    color: #fff;
+}
+.contact-form input[type="email"],
+.contact-form textarea {
+    background-color: #444;
+    color: #fff;
+}
+
+.contact-form input[type="text"]::placeholder{
+	 color: #ccc;
+}
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form button {
+    background-color: #15dc29;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #04ad26;
+}
+
+.copyright {
+    margin-top: 40px;
+    color: #999;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /* Styles for tablets */
+    header {
+        padding: 15px 0;
+    }
+
+    .logo img {
+        height: 30px; /* Adjust the logo size for smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Styles for mobile devices */
+    header {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 25px; /* Adjust the logo size for smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+}
+
+
+.free,
+.paid {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.free {
+    background-color: #e6f7ff; /* Light blue background for free section */
+}
+
+.paid {
+    background-color: #ffe6e6; /* Light red background for paid section */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    /* Styles for tablets */
+    .free,
+    .paid {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Styles for mobile devices */
+    .free,
+    .paid {
+        padding: 10px;
+    }
+}
+
+
+
+
